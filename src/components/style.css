@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/*Apply font for EVERYTHING*/
 * > * {
     font-family: "Press Start 2P";
     margin: 0;
 }
 
+/*Start of Leaderboard.js styling*/
 body {
     background-color: #c8d7c9; /* Replace with your desired background color */
     margin: 0; /* Remove default body margin */
@@ -110,4 +112,58 @@ body {
     transform: rotate(-10deg);
     text-align: center; /* Center text horizontally */
     line-height: 20px; /* Center text vertically by matching line height with div height */
+}
+/*End of Leaderboard.js styling*/
+
+/*Start of NewScore.js styling*/
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this value as needed to center vertically */
+}
+  
+.center-form {
+    text-align: left; /* Align the form fields to the left */
+    max-width: 300px; /* Adjust the maximum width of the form as needed */
+    width: 100%;
+}
+  
+.form-group {
+    margin-bottom: 20px; /* Adjust the spacing between form fields as needed */
+    display: flex;
+    flex-direction: row; /* Display form-group contents in a row */
+    align-items: center; /* Align items vertically within form-group */
+}
+  
+label {
+    width: 100px; /* Adjust label width as needed */
+    margin-right: 10px; /* Adjust spacing between label and input field as needed */
+}
+  
+input[type="text"],
+input[type="number"] {
+    width: 100%; /* Make input fields take up full width within the form */
+    padding: 10px; /* Adjust input field padding as needed */
+}
+  
+button[type="submit"] {
+    display: block; /* Display the button on a new line */
+    width: 100%; /* Make the button take up full width within the form */
+}
+
+/* In your CSS file (style.css) */
+.equal-width-input {
+    width: 100%; /* Set input fields to take up 100% width within their containers */
+    padding: 10px; /* Adjust input field padding as needed */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+  }
+
+.heading-with-padding {
+    padding: 10px; /* Adjust the amount of padding as needed */
+}
+.form-container {
+    border: 1px solid #000000; /* Add a border with a 1px width and gray color */
+    padding: 20px; /* Add padding to create space between the content and the border */
 }
