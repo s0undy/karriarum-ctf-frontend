@@ -1,91 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * > * {
-    font-family: "Poppins", cursive;
+    font-family: "Press Start 2P";
     margin: 0;
 }
 
-:root{
-    --color-dark: #2C3131;
-    --color-light: #F3F3F2;
+body {
+    background-color: #c8d7c9; /* Replace with your desired background color */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
 }
 
-#main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+.bg-colored-table {
+    background-color: #f0f0f0; /* Replace with your desired background color for the table */
+}
+.header {
+    margin-bottom: 20px; /* Add spacing between header and table */
 }
 
-.board {
-    text-align: center;
-}
-
-.board .leaderboard{
-    margin-bottom: 1em;
-}
-
-.board .duration{
+.container {
     display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.board .duration > button{
-    border: 1px solid var(--color-light);
-    padding: .5em 2em;
-    border-radius: 50px;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.board .duration > button:hover{
-    background-color: var(--color-dark);
-    color: var(--color-light);
-}
-
-.active{
-    background-color: var(--color-dark);
-    color: var(--color-light);
-}
-
-#profile{
-    /* display: flex; */
-
-    margin-top: 3em;
-}
-
-#profile .flex{
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-    text-align: left;
-    margin-bottom: 2em;
-}
-
-#profile .flex .item{
-    display: flex;
-    align-items: center;
-}
-
-#profile .flex img{
-    width: 20%;
-    border-radius: 50%;
-}
-
-#profile .flex .info{
-   padding: 1em;
-}
-
-.text-dark{
-    color: var(--color-dark);
-}
-
-/* styles.css */
-.table-container {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; /* This ensures the table takes up the available vertical space */
+    height: 100vh;
 }
   
+.table-container {
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+}
+  
+.centered-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between table cells */
+}
+  
+.leaderboard-heading {
+    margin-bottom: 20px;
+}
+  
+.tight-header {
+    padding: 5px 10px; /* Adjust padding as needed */
+    margin: 0;
+}
+  
+.tight-cell {
+    padding: 5px 10px; /* Adjust padding as needed */
+    margin: 0;
+}
+
+.logo-container {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    margin: 10px; /* Adjust the margin as needed to control spacing from the corner */
+}
+  
+.logo {
+    width: 200px; /* Adjust the logo's width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.bordered-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    border: 3px solid #c8d7c9; /* Add a border around the table */
+    border-radius: 15px; /* Optional: Add rounded corners to the border */
+}
+
+
+/* Add lines between table rows */
+.bordered-table tbody tr {
+    border-bottom: 1px solid #ccc; /* Adjust color as needed */
+}
+.rounded-table {
+    border-radius: 15px;
+}

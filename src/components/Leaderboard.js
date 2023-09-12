@@ -4,8 +4,6 @@ const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching data (replace with your actual fetch logic)
-    // You can replace this with the actual fetch logic to get your JSON data
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:4000/api/v1/list');
@@ -19,34 +17,39 @@ const Leaderboard = () => {
     fetchData();
   }, []);
 
-  return (
-    <div>
-      <h2 className='table-container'>Leaderboard</h2>
-      <div className="table-container"> {/* Wrap the table in a div */}
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th className="center">Flags</th>
-            </tr>
-          </thead>
-          <tbody>
-            {leaderboardData
-              .sort((a, b) => b.Flags - a.Flags)
-              .slice(0, 10)
-              .map((player, index) => (
-                <tr key={player.ID}>
-                  <td>{index + 1}</td>
-                  <td>{player.Name}</td>
-                  <td>{player.Flags}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+    return (
+      <div className="container">
+        <div className="table-container">
+          <h2 className="leaderboard-heading">Habo kommun CTF Leaderboard</h2>
+          <table className="bordered-table rounded-table bg-colored-table">
+            <thead>
+              <tr>
+                <th className="tight-header">Rank</th>
+                <th className="tight-header">Name</th>
+                <th className="tight-header center">Flags</th>
+              </tr>
+            </thead>
+            <tbody>
+              {leaderboardData
+                .sort((a, b) => b.Flags - a.Flags)
+                .slice(0, 20)
+                .map((player, index) => (
+                  <tr key={player.ID}>
+                    <td className="tight-cell">{index + 1}</td>
+                    <td className="tight-cell">{player.Name}</td>
+                    <td className="tight-cell center">{player.Flags}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="logo-container">
+        <img src="/Logo_Liggande_Habo_Kommun.png" alt="Logo" className="logo" />
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Leaderboard;
+    );
+  };
+  
+  export default Leaderboard;
+  
+  
