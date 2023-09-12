@@ -19,8 +19,11 @@ const Leaderboard = () => {
 
     return (
       <div className="container">
+        <div className="circle-div">
+          <p className="circle-text">Den hållbara kommunen för hela livet</p>
+        </div>
         <div className="table-container">
-          <h2 className="leaderboard-heading">Habo kommun CTF Leaderboard</h2>
+          <h2 className="leaderboard-heading bordered-heading">Habo kommun CTF Leaderboard</h2>
           <table className="bordered-table rounded-table bg-colored-table">
             <thead>
               <tr>
