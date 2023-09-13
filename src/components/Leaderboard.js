@@ -33,32 +33,37 @@ const Leaderboard = () => {
           <p className="circle-text">Den hållbara kommunen för hela livet</p>
         </div>
         <div className="table-container">
-          <h2 className="leaderboard-heading bordered-heading">Habo kommun CTF Leaderboard</h2>
-          <table className="bordered-table rounded-table bg-colored-table">
-            <thead>
-              <tr>
-                <th className="tight-header">Rank</th>
-                <th className="tight-header">Name</th>
-                <th className="tight-header center">Flags</th>
-              </tr>
-            </thead>
-            <tbody>
-              {leaderboardData
-                .sort((a, b) => b.Flags - a.Flags)
-                .slice(0, 20)
-                .map((player, index) => (
-                  <tr key={player.ID}>
+          <h1 className="leaderboard-heading">Habo kommun CTF Leaderboard</h1>
+          <div className='rounded-table-container'>
+            <table className="bordered-table rounded-table bg-colored-table">
+              <thead>
+                <tr>
+                  <th className="tight-header">Rank</th>
+                  <th className="tight-header">Name</th>
+                  <th className="tight-header center">Flags</th>
+                </tr>
+              </thead>
+              <tbody>
+                {leaderboardData
+                  .sort((a, b) => b.Flags - a.Flags)
+                  .slice(0, 20)
+                  .map((player, index) => (
+                  <tr key={player.ID} className="table-row table-row-spacing">
                     <td className="tight-cell">{index + 1}</td>
                     <td className="tight-cell">{player.Name}</td>
-                    <td className="tight-cell center">{player.Flags}</td>
+                    <td className="tight-cell">{player.Flags}</td>
                   </tr>
-                ))}
-            </tbody>
-          </table>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         </div>
         <div className="logo-container">
         <img src="/Logo_Liggande_Habo_Kommun.png" alt="Logo" className="logo" />
         </div>
+        <div className="horizontal-div">
+          <p className="horizontal-text">habokommun.se/karriarum</p>
+      </div>
       </div>
     );
   };

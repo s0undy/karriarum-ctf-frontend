@@ -14,7 +14,7 @@ body {
 }
 
 .bg-colored-table {
-    background-color: #f0f0f0; /* Replace with your desired background color for the table */
+    background-color: #E8F4EA; /* Replace with your desired background color for the table */
 }
 .header {
     margin-bottom: 20px; /* Add spacing between header and table */
@@ -27,7 +27,12 @@ body {
     align-items: center;
     height: 100vh;
 }
-  
+
+.rounded-table-container {
+    border: 1px solid #ccc; /* Border for the table container */
+    border-radius: 15px; /* Adjust the value as needed for the corner roundness */
+    overflow: hidden; /* Clip any content that extends beyond the rounded corners */
+}
 .table-container {
     text-align: center;
     width: 50%;
@@ -77,15 +82,29 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin: 0;
-    border: 0px solid #000000; /* Add a border around the table */
+    border: 3px solid #E8F4EA; /* Add a border around the table */
 }
 
 /* Add lines between table rows */
-.bordered-table tbody tr {
-    border-bottom: 2px solid #ccc; /* Adjust color as needed */
+
+/* In your CSS file (style.css) */
+.table-row {
+    border-bottom: 2px solid #c8d7c9; /* Add a border between table rows */
+    /* Add any other styling you want for table rows */
+  }
+
+.table-row-spacing {
+    padding-top: 50px; /* Add top padding to increase space */
+    padding-bottom: 50px; /* Add bottom padding to increase space */
 }
+  
+  /* Style the last table row to remove the bottom border */
+.table-row:last-child {
+    border-bottom: none; /* Remove the bottom border for the last row */
+}
+
 .rounded-table {
-    border-radius: 15px;
+    border-radius: 0px;
 }
 
 .circle-div {
@@ -112,6 +131,23 @@ body {
     transform: rotate(-10deg);
     text-align: center; /* Center text horizontally */
     line-height: 20px; /* Center text vertically by matching line height with div height */
+}
+
+.horizontal-div {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 20%;
+    background-color: #E8F4EA; /* Background color for the horizontal div */
+    color: #255E3B; /* Text color */
+    text-align: left;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+  
+.horizontal-text {
+    font-size: 14px;
+    padding: 10px; /* Add padding for spacing inside the div */
 }
 /*End of Leaderboard.js styling*/
 
