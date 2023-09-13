@@ -3,18 +3,28 @@ import React, { useEffect, useState } from 'react';
 const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:4000/api/v1/list');
-        const data = await response.json();
-        setLeaderboardData(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:4000/api/v1/list');
+      const data = await response.json();
+      setLeaderboardData(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
-    fetchData();
+  useEffect(() => {
+    fetchData(); // Initial fetch when component mounts
+
+    // Set up an interval to fetch data every 10 seconds
+    const intervalId = setInterval(() => {
+      fetchData();
+    }, 10000); // 10 seconds in milliseconds
+
+    // Clean up the interval when the component unmounts
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
     return (

@@ -5,6 +5,8 @@ const NewScore = () => {
   const [formData, setFormData] = useState({
     name: '',
     flags: '',
+    email: '',
+    mobileNumber: '',
   });
 
   const handleInputChange = (e) => {
@@ -26,7 +28,9 @@ const NewScore = () => {
         },
         body: JSON.stringify({
           name: formData.name,
-          flags: parseInt(formData.flags), // Ensure flags is parsed as an integer
+          flags: parseInt(formData.flags),
+          email: formData.email,
+          mobilenumber: formData.mobileNumber
         }),
       });
   
@@ -49,28 +53,52 @@ const NewScore = () => {
             <h2 className="heading-with-padding">Add New Score</h2>
             <form onSubmit={handleSubmit} className="center-form">
             <div className="form-group">
-                <label htmlFor="playerName">Name:</label>
+                <label htmlFor="name">Name:</label>
                 <input
                     type="text"
-                    id="playerName"
-                    name="playerName"
-                    value={formData.playerName}
+                    id="name"
+                    name="name"
+                    value={formData.name}
                     onChange={handleInputChange}
                     required
                     className="equal-width-input" // Added class for equal width
                 />
             </div>
             <div className="form-group">
-                <label htmlFor="score">Flags:</label>
+                <label htmlFor="flags">Flags:</label>
                 <input
                     type="number"
-                    id="score"
-                    name="score"
-                    value={formData.score}
+                    id="flags"
+                    name="flags"
+                    value={formData.flags}
                     onChange={handleInputChange}
                     required
                     className="equal-width-input" // Added class for equal width
                 />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                className="equal-width-input"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="mobileNumber">Mobile Number:</label>
+              <input
+                type="text"
+                id="mobileNumber"
+                name="mobileNumber"
+                value={formData.mobileNumber}
+                onChange={handleInputChange}
+                required
+                className="equal-width-input"
+              />
             </div>
             <div className="form-group">
                 <button type="submit">Submit</button>
