@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from "./config";
 
 const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/v1/list');
+      const response = await fetch(`http://${API_URL}/api/v1/list`);
       const data = await response.json();
       setLeaderboardData(data);
     } catch (error) {

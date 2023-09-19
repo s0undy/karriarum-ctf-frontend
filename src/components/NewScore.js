@@ -61,7 +61,7 @@ const NewScore = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="equal-width-input" // Added class for equal width
+                    className="equal-width-input"
                 />
             </div>
             <div className="form-group">
@@ -73,7 +73,7 @@ const NewScore = () => {
                     value={formData.flags}
                     onChange={handleInputChange}
                     required
-                    className="equal-width-input" // Added class for equal width
+                    className="equal-width-input" 
                 />
             </div>
             <div className="form-group">

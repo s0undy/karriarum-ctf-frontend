@@ -8,16 +8,16 @@
 
 /*Start of Leaderboard.js styling*/
 body {
-    background-color: #c8d7c9; /* Replace with your desired background color */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
+    background-color: #c8d7c9; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .bg-colored-table {
-    background-color: #E8F4EA; /* Replace with your desired background color for the table */
+    background-color: #E8F4EA; 
 }
 .header {
-    margin-bottom: 20px; /* Add spacing between header and table */
+    margin-bottom: 20px; 
 }
 
 .container {
@@ -29,9 +29,9 @@ body {
 }
 
 .rounded-table-container {
-    border: 1px solid #ccc; /* Border for the table container */
-    border-radius: 15px; /* Adjust the value as needed for the corner roundness */
-    overflow: hidden; /* Clip any content that extends beyond the rounded corners */
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    overflow: hidden; 
 }
 .table-container {
     text-align: center;
@@ -42,7 +42,7 @@ body {
   
 .centered-table {
     width: 100%;
-    border-collapse: collapse; /* Remove spacing between table cells */
+    border-collapse: collapse; 
 }
   
 .leaderboard-heading {
@@ -50,19 +50,19 @@ body {
 }
 /* Add borders around the h2 element */
 .bordered-heading {
-    border: 2px solid #000000; /* Border color */
+    border: 2px solid #000000; 
     border-radius: 15px;
-    padding: 10px; /* Add padding to the heading */
-    display: inline-block; /* Ensure the border wraps around the text */
+    padding: 10px; 
+    display: inline-block; 
 }
   
 .tight-header {
-    padding: 5px 10px; /* Adjust padding as needed */
+    padding: 5px 10px; 
     margin: 0;
 }
   
 .tight-cell {
-    padding: 5px 10px; /* Adjust padding as needed */
+    padding: 5px 10px; 
     margin: 0;
 }
 
@@ -70,19 +70,19 @@ body {
     position: absolute;
     bottom: 0px;
     right: 0;
-    margin: 10px; /* Adjust the margin as needed to control spacing from the corner */
+    margin: 10px; 
 }
   
 .logo {
-    width: 200px; /* Adjust the logo's width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 200px; 
+    height: auto; 
 }
 
 .bordered-table {
     width: 100%;
     border-collapse: collapse;
     margin: 0;
-    border: 3px solid #E8F4EA; /* Add a border around the table */
+    border: 3px solid #E8F4EA; 
 }
 
 /* Add lines between table rows */
@@ -90,17 +90,17 @@ body {
 /* In your CSS file (style.css) */
 .table-row {
     border-bottom: 2px solid #c8d7c9; /* Add a border between table rows */
-    /* Add any other styling you want for table rows */
+
   }
 
 .table-row-spacing {
-    padding-top: 50px; /* Add top padding to increase space */
-    padding-bottom: 50px; /* Add bottom padding to increase space */
+    padding-top: 50px; 
+    padding-bottom: 50px; 
 }
   
   /* Style the last table row to remove the bottom border */
 .table-row:last-child {
-    border-bottom: none; /* Remove the bottom border for the last row */
+    border-bottom: none;
 }
 
 .rounded-table {
@@ -108,29 +108,29 @@ body {
 }
 
 .circle-div {
-    width: 200px; /* Adjust the width and height as needed */
+    width: 200px;
     height: 200px;
-    background-color: #215D39; /* Background color of the circle */
-    border-radius: 50%; /* Create a circle with 50% border-radius */
+    background-color: #215D39;
+    border-radius: 50%; 
     position: absolute;
     top: 0;
     left: 0;
-    margin: 20px; /* Adjust the margin as needed */
+    margin: 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px; /* Adjust the font size as needed */
-    color: #fff; /* Text color */
+    font-size: 20px; 
+    color: #fff; 
 }
 
 .circle-text {
-    color: #fff; /* Text color */
+    color: #fff; 
     font-size: 14px;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0; 
+    padding: 0; 
     transform: rotate(-10deg);
-    text-align: center; /* Center text horizontally */
-    line-height: 20px; /* Center text vertically by matching line height with div height */
+    text-align: center;
+    line-height: 20px; 
 }
 
 .horizontal-div {
@@ -138,8 +138,8 @@ body {
     bottom: 40px;
     left: 0;
     width: 20%;
-    background-color: #E8F4EA; /* Background color for the horizontal div */
-    color: #255E3B; /* Text color */
+    background-color: #E8F4EA; 
+    color: #255E3B; 
     text-align: left;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -147,7 +147,7 @@ body {
   
 .horizontal-text {
     font-size: 14px;
-    padding: 10px; /* Add padding for spacing inside the div */
+    padding: 10px; 
 }
 /*End of Leaderboard.js styling*/
 
@@ -157,49 +157,49 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust this value as needed to center vertically */
+    height: 100vh; 
 }
   
 .center-form {
-    text-align: left; /* Align the form fields to the left */
-    max-width: 300px; /* Adjust the maximum width of the form as needed */
+    text-align: left; 
+    max-width: 300px; 
     width: 100%;
 }
   
 .form-group {
-    margin-bottom: 20px; /* Adjust the spacing between form fields as needed */
+    margin-bottom: 20px; 
     display: flex;
-    flex-direction: row; /* Display form-group contents in a row */
-    align-items: center; /* Align items vertically within form-group */
+    flex-direction: row; 
+    align-items: center; 
 }
   
 label {
-    width: 100px; /* Adjust label width as needed */
-    margin-right: 10px; /* Adjust spacing between label and input field as needed */
+    width: 100px; 
+    margin-right: 10px; 
 }
   
 input[type="text"],
 input[type="number"] {
-    width: 100%; /* Make input fields take up full width within the form */
-    padding: 10px; /* Adjust input field padding as needed */
+    width: 100%; 
+    padding: 10px; 
 }
   
 button[type="submit"] {
-    display: block; /* Display the button on a new line */
-    width: 100%; /* Make the button take up full width within the form */
+    display: block; 
+    width: 100%; 
 }
 
-/* In your CSS file (style.css) */
+
 .equal-width-input {
-    width: 100%; /* Set input fields to take up 100% width within their containers */
-    padding: 10px; /* Adjust input field padding as needed */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box; 
   }
 
 .heading-with-padding {
-    padding: 10px; /* Adjust the amount of padding as needed */
+    padding: 10px; 
 }
 .form-container {
-    border: 1px solid #000000; /* Add a border with a 1px width and gray color */
-    padding: 20px; /* Add padding to create space between the content and the border */
+    border: 1px solid #000000; 
+    padding: 20px; 
 }
