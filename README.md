@@ -20,4 +20,4 @@ See examples in [examples/compose](https://github.com/s0undy/karriarum-ctf-front
 
 | Environment Variable | Description                               | Default | Required |
 |----------------------|-------------------------------------------|---------|----------|
-| `API_URL`            | Hostname/IP of the Postgres database host |         | ✅       |
+| `API_URL`            | Hostname+port of the API-backend          |         | ✅       |
