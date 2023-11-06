@@ -1,6 +1,5 @@
 // NewScore.js
 import React, { useState } from 'react';
-import { API_URL } from "./config";
 
 const NewScore = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +21,7 @@ const NewScore = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch(`http://${API_URL}/api/v1/score`, {
+      const response = await fetch(`http://localhost:4000/api/v1/score`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
