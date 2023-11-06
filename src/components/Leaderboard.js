@@ -5,7 +5,7 @@ const Leaderboard = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/v1/list`);
+      const response = await fetch(`http://karriarum-ctf-backend:4000/api/v1/list`);
       const data = await response.json();
       setLeaderboardData(data);
     } catch (error) {
