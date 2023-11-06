@@ -29,8 +29,9 @@ services:
       DB_NAME: karriarum
       DB_PORT: 5432
       DB_SSLMODE: disable
+      APP_PORT: :4000
     ports:
-      - :4000
+      - 4000:4000
     depends_on:
       init-db:
         condition: service_completed_successfully

@@ -21,7 +21,7 @@ const NewScore = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch(`http://karriarum-ctf-backend:4000/api/v1/score`, {
+      const response = await fetch('http://localhost:4000/api/v1/score', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
